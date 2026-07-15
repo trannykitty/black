@@ -1,4 +1,8 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Black Screen Lite</title><style>html,body{margin:0;width:100%;height:100%;background:#000;cursor:none}#hint{position:fixed;bottom:10px;left:10px;color:#555;font:12px sans-serif}body:fullscreen #hint{display:none}</style></head><body><div id="hint">Click to enter fullscreen. Esc to exit.</div><script>
-document.body.onclick=()=>document.documentElement.requestFullscreen?.();
-let t;document.onmousemove=()=>{document.body.style.cursor='default';clearTimeout(t);t=setTimeout(()=>document.body.style.cursor='none',1500);}
-</script></body></html>
+<!doctype html>
+<meta charset=utf-8>
+<style>
+html,body{margin:0;height:100%;background:#000;cursor:none}
+</style>
+<body onclick="document.documentElement.requestFullscreen?.()"
+onmousemove="clearTimeout(t);document.body.style.cursor='';t=setTimeout(()=>document.body.style.cursor='none',1500)">
+<script>let t</script>
